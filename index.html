@@ -10,30 +10,76 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Ping coming soon page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <img src="./images/logo.svg" alt="" />
-    </header>
-    <main>
-      <div>
-        <h1>We are launching <span>soon!</span></h1>
-        <p>Subscribe and get notified</p>
-        <button>Notify Me</button>
-      </div>
+    <div class="container">
+      <header>
+        <img src="./images/logo.svg" alt="" />
+      </header>
+      <main>
+        <div>
+          <h1>We are launching <span>soon!</span></h1>
+          <p>Subscribe and get notified</p>
+          <form class="form" action="">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Your email address..."
+            />
 
-      <div>
-        <img
-          src="./images/illustration-dashboard.png"
-          alt="dashboard illustration"
-        />
-      </div>
-    </main>
+            <!-- <em id="error-text" class="error-text">
+              Please provide a valid email address
+            </em> -->
 
-    <footer>
-      <p>&copy; Copyright Ping. All rights reserved.</p>
-    </footer>
+            <button class="btn" type="submit">Notify Me</button>
+          </form>
+        </div>
+
+        <div class="img-div">
+          <img
+            src="./images/illustration-dashboard.png"
+            alt="dashboard illustration"
+          />
+        </div>
+      </main>
+
+      <footer>
+        <ul class="social-list">
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>
