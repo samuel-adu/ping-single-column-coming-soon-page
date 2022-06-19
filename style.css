@@ -1,13 +1,17 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --bg-primary: hsl(223, 87%, 63%);
+  --bg-btn-hover: hsl(223, 69%, 61%);
   --bg-accent: hsl(223, 100%, 88%);
   --clr-primary: hsl(0, 0%, 59%);
   --clr-error: hsl(354, 100%, 66%);
+  --clr-success: hsl(112, 100%, 66%);
   --clr-accent: hsl(209, 33%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -17,6 +21,7 @@ body {
   color: var(--clr-primary);
   font-weight: 300;
   font-size: 1rem;
+  min-height: 100vh;
 }
 
 header {
@@ -48,7 +53,11 @@ h1 > span {
   font-weight: 700;
 }
 
-.error-text {
+p {
+  margin-bottom: 1em;
+}
+
+em {
   color: var(--clr-error);
   font-size: 00.865rem;
 }
@@ -59,35 +68,60 @@ h1 > span {
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: space-between;
-  gap: 1em;
+  padding: 1em 2em;
 }
 
-input {
-  padding: 0.5em 1.5em;
-  border-radius: 20px;
-  border: 1px solid var(--bg-accent);
-  color: var(--bg-accent);
+.form-control {
+  margin-bottom: 1em;
+}
+
+.form-control input {
+  padding: 0.75em;
+  margin-bottom: 0.5em;
+  border-radius: 40px;
+  border: 2px solid var(--bg-accent);
+  color: var(--clr-accent);
   font-size: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.form-control input:focus {
+  outline: none;
+}
+
+.form-control.success input {
+  border-color: var(--clr-success);
+}
+
+.form-control.error input {
+  border-color: var(--clr-error);
+}
+
+.form-control small {
+  color: var(--clr-error);
+  font-style: italic;
 }
 
 .btn {
   font-size: 1rem;
-  padding: 0.5em 1.5em;
-  border-radius: 20px;
+  padding: 0.75em 1.5em;
+  border-radius: 40px;
   background-color: var(--bg-primary);
   color: white;
-  border: 1px solid var(--bg-primary);
+  border: 2px solid var(--bg-primary);
   font-weight: 500;
   cursor: pointer;
   display: inline-block;
+  width: 100%;
 }
 
 .btn:hover {
-  background-color: var(--bg-accent);
+  background-color: var(--bg-btn-hover);
+}
+
+.btn:focus {
+  outline: none;
 }
 
 footer {
@@ -102,6 +136,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-block: 2em;
 }
 
 .social-list li {
@@ -113,6 +148,8 @@ footer {
   border: 1px solid var(--clr-primary);
   border-radius: 50%;
   padding: 0.75em;
+  width: 40px;
+  height: 40px;
 }
 
 .fa-brands:hover {
@@ -122,12 +159,22 @@ footer {
 
 @media (min-width: 569px) {
   .form {
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2em;
+    text-align: left;
   }
 
-  input {
-    flex-grow: 1;
+  .form-control.email {
+    width: 75%;
+  }
+
+  .form-control.submit-btn {
+    width: 25%;
+  }
+
+  .error-message {
+    text-align: left;
   }
 }

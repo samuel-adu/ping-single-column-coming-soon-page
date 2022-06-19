@@ -42,17 +42,22 @@
         <div>
           <h1>We are launching <span>soon!</span></h1>
           <p>Subscribe and get notified</p>
-          <form class="form" action="">
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Your email address..."
-            />
 
-            <em id="error-text" class="error-text"></em>
+          <form class="form" id="form">
+            <div class="form-control email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email address..."
+              />
 
-            <button class="btn" type="submit">Notify Me</button>
+              <small id="error-message" class="error-message"></small>
+            </div>
+
+            <div class="form-control submit-btn">
+              <button class="btn" type="submit">Notify Me</button>
+            </div>
           </form>
         </div>
 
@@ -76,8 +81,10 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
           </li>
         </ul>
+
         <p>&copy; Copyright Ping. All rights reserved.</p>
       </footer>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
