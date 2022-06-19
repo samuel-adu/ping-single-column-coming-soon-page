@@ -37,7 +37,7 @@ function checkEmail() {
   let valid = false;
   const email = emailEl.value.trim();
   if (isEmpty(email)) {
-    showError(emailEl, "Email cannot be blank.");
+    showError(emailEl, "Whoops! It looks like you forgot to add your email");
   } else if (!isEmailValid(email)) {
     showError(emailEl, "Please provide a valid email address.");
   } else {
